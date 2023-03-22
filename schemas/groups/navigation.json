@@ -49,7 +49,7 @@
           "description": "The point on earth the vessel's presently navigating towards",
           "anyOf": [
             {
-              "$ref": ""
+              "$ref": "../definitions.json#/definitions/numberValue"
             },
             {
               "properties": {
