@@ -66,6 +66,11 @@
                     }
                   }
                 },
+                "arrivalCircle": {
+                  "description": "The distance in meters between the vessel's present position and the nextPoint",
+                  "units": "m",
+                  "$ref": "../definitions.json#/definitions/numberValue"
+                },
                 "distance": {
                   "description": "The distance in meters between the vessel's present position and the nextPoint",
                   "units": "m",
