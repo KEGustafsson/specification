@@ -47,96 +47,82 @@
         "nextPoint": {
           "type": "object",
           "description": "The point on earth the vessel's presently navigating towards",
-          "anyOf": [
-            {
-              "$ref": "../definitions.json#/definitions/commonValueFields"
-            },
-            {
+          "properties": {
+            "value": {
+              "type": "object",
               "properties": {
-                "value": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "description": "The type of the next point (e.g. Waypoint, POI, Race Mark, etc)",
-                      "type": "string"
-                    },
-                    "href": {
-                      "description": "A reference (URL) to an object (under resources) this point is related to",
-                      "type": "string"
-                    }
-                  }
+                "type": {
+                  "description": "The type of the next point (e.g. Waypoint, POI, Race Mark, etc)",
+                  "type": "string"
                 },
-                "distance": {
-                  "description": "The distance in meters between the vessel's present position and the nextPoint",
-                  "units": "m",
-                  "$ref": "../definitions.json#/definitions/numberValue"
-                },
-                "bearingTrue": {
-                  "description": "The bearing of a line between the vessel's current position and nextPoint, relative to true north",
-                  "units": "rad",
-                  "$ref": "../definitions.json#/definitions/numberValue"
-                },
-                "bearingMagnetic": {
-                  "description": "The bearing of a line between the vessel's current position and nextPoint, relative to magnetic north",
-                  "units": "rad",
-                  "$ref": "../definitions.json#/definitions/numberValue"
-                },
-                "velocityMadeGood": {
-                  "description": "The velocity component of the vessel towards the nextPoint",
-                  "units": "m/s",
-                  "$ref": "../definitions.json#/definitions/numberValue"
-                },
-                "timeToGo": {
-                  "description": "Time in seconds to reach nextPoint's perpendicular) with current speed & direction",
-                  "units": "s",
-                  "$ref": "../definitions.json#/definitions/numberValue"
-                },
-                "position": {
-                  "description": "The position of nextPoint in two dimensions",
-                  "$ref": "../definitions.json#/definitions/position"
-                },
-                "estimatedTimeOfArrival": {
-                  "$ref": "../definitions.json#/definitions/datetimeValue",
-                  "description": "The estimated time of arrival at nextPoint position"
+                "href": {
+                  "description": "A reference (URL) to an object (under resources) this point is related to",
+                  "type": "string"
                 }
               }
+            },
+            "distance": {
+              "description": "The distance in meters between the vessel's present position and the nextPoint",
+              "units": "m",
+              "$ref": "../definitions.json#/definitions/numberValue"
+            },
+            "bearingTrue": {
+              "description": "The bearing of a line between the vessel's current position and nextPoint, relative to true north",
+              "units": "rad",
+              "$ref": "../definitions.json#/definitions/numberValue"
+            },
+            "bearingMagnetic": {
+              "description": "The bearing of a line between the vessel's current position and nextPoint, relative to magnetic north",
+              "units": "rad",
+              "$ref": "../definitions.json#/definitions/numberValue"
+            },
+            "velocityMadeGood": {
+              "description": "The velocity component of the vessel towards the nextPoint",
+              "units": "m/s",
+              "$ref": "../definitions.json#/definitions/numberValue"
+            },
+            "timeToGo": {
+              "description": "Time in seconds to reach nextPoint's perpendicular) with current speed & direction",
+              "units": "s",
+              "$ref": "../definitions.json#/definitions/numberValue"
+            },
+            "position": {
+              "description": "The position of nextPoint in two dimensions",
+              "$ref": "../definitions.json#/definitions/position"
+            },
+            "estimatedTimeOfArrival": {
+              "$ref": "../definitions.json#/definitions/datetimeValue",
+              "description": "The estimated time of arrival at nextPoint position"
             }
-          ]
+          }
         },
         "previousPoint": {
           "type": "object",
           "description": "The point on earth the vessel's presently navigating from",
-          "allOf": [
-            {
-              "$ref": "../definitions.json#/definitions/commonValueFields"
-            },
-            {
+          "properties": {
+            "value": {
+              "type": "object",
               "properties": {
-                "value": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "description": "The type of the previous point (e.g. Waypoint, POI, Race Mark, etc)",
-                      "type": "string"
-                    },
-                    "href": {
-                      "description": "A reference (URL) to an object (under resources) this point is related to",
-                      "type": "string"
-                    }
-                  }
+                "type": {
+                  "description": "The type of the previous point (e.g. Waypoint, POI, Race Mark, etc)",
+                  "type": "string"
                 },
-                "distance": {
-                  "description": "The distance in meters between previousPoint and the vessel's present position",
-                  "units": "m",
-                  "$ref": "../definitions.json#/definitions/numberValue"
-                },
-                "position": {
-                  "description": "The position of lastPoint in two dimensions",
-                  "$ref": "../definitions.json#/definitions/position"
+                "href": {
+                  "description": "A reference (URL) to an object (under resources) this point is related to",
+                  "type": "string"
                 }
               }
+            },
+            "distance": {
+              "description": "The distance in meters between previousPoint and the vessel's present position",
+              "units": "m",
+              "$ref": "../definitions.json#/definitions/numberValue"
+            },
+            "position": {
+              "description": "The position of lastPoint in two dimensions",
+              "$ref": "../definitions.json#/definitions/position"
             }
-          ]
+          }          
         }
       }
     }
